@@ -1,0 +1,12 @@
+.More{
+    background-color: #b6b0b0;
+    min-height: 50vh;
+}
+.more1{
+    float: left;
+    width: 50%;
+}
+.more2{
+    float: right;
+    width: 50%;
+}
