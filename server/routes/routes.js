@@ -2,11 +2,13 @@ const router = require("express").Router();
 //data validation
 const {body} = require('express-validator');
 
-const{homePage,register,registerPage,login,loginPage,} = require('../controllers/userController');
+const{homePage,register,registerPage,login,loginPage,passwordResetLink} = require('../controllers/userController');
 
 
 const ifNotLoggedin = (req, res, next) => {
+
     if(!req.session.userID){
+        
         return res.redirect('/login');
     }
     next();
@@ -19,11 +21,19 @@ const ifLoggedin = (req,res,next) => {
     next();
 }
 
-router.get('/home', ifNotLoggedin, homePage);
+const isLoggedIn = (req,res,next) => {
+     if(req.session.userID == undefined){
+        return res.redirect('/login');
+    }
+    next()
+}
 
-router.get("/login", ifLoggedin, loginPage);
 
-router.post("/login",ifLoggedin,
+router.get('/home',isLoggedIn, homePage);
+
+router.get("/login", isLoggedIn, loginPage);
+
+router.post("/login",
     [
         body("_email", "Invalid email address")
             .notEmpty()
@@ -39,11 +49,11 @@ router.post("/login",ifLoggedin,
 );
 
 //getting the registration page
-router.get("/signup", ifLoggedin, registerPage);
+router.get("/signup", isLoggedIn, registerPage);
 
 router.post(
     "/signup",
-    ifLoggedin,
+    
     [
         body("_name", "The name must be of minimum 3 characters length")
             .notEmpty()
@@ -69,5 +79,9 @@ router.get('/logout', (req, res, next) => {
     });
     res.redirect('/login');
 });
+
+router.get('/recover/account', passwordResetLink);
+
+
 
 module.exports = router;
