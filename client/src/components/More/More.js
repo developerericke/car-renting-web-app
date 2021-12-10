@@ -1,5 +1,8 @@
 import React from "react";
 import './More.css'
+import Photo from './img/1.jpg'
+import Photo1 from './img/5.jpg'
+import Photo2 from './img/7.jpg'
 
 const More = () => {
   return (
@@ -27,7 +30,9 @@ const More = () => {
       </div>
       
       <div className="more2">
-          <img src="" alt="Image"/>
+        <div className="img1"><img src={Photo} alt="Image"/></div>
+        <div className="img2"><img src={Photo1} alt="Image"/></div>
+        <div className="img3"><img src={Photo2} alt="Image"/></div>
       </div>
     </div>
   );

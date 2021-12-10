@@ -1,0 +1,15 @@
+.footers{
+    color: #fff;
+    min-height: 7vh;
+    background-color: black;
+}
+.footer1{
+    float: left;
+    width: 50%;
+    font-size: 20px;
+    font-family: cursive;
+}
+.footer2{
+    float: right;
+    width: 50%;
+}

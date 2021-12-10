@@ -1,5 +1,7 @@
 import React from "react";
 import "./Carousel.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Carousel = () => {
   return (

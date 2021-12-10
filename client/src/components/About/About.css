@@ -1,0 +1,108 @@
+.About{
+    background-color: black;
+    color: #fff;
+    min-height: 60vh;
+    margin-top: -7em;
+    position: relative;
+}
+.Aboutleft{
+    float: left;
+    width: 50%;
+}
+.Aboutleft h1{
+    font-size: 30px;
+    font-family: cursive;
+    color: red;
+}
+.Aboutleft p{
+    font-size: 15px;
+}
+.Aboutleft button{
+    border-radius: 10%;
+    background-color: red;
+    color: #fff;
+    width: 15%;
+    height: 4em;
+}
+.Aboutleft ul{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Aboutright{
+    float: right;
+    width: 40%;
+    margin-right: 14em;
+    margin-top: 10em;
+}
+.Aboutright img{
+    width: 50%;
+    height: 40%;
+}
+.custom-shape-divider-bottom-1638974829 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1638974829 svg {
+    position: relative;
+    display: block;
+    width: calc(157% + 1.3px);
+    height: 311px;
+}
+
+.custom-shape-divider-bottom-1638974829 .shape-fill {
+    fill: darkgoldenrod;
+}
+
+@media screen and (max-width: 960px){
+    .About{
+        display: grid;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+    .Aboutleft{
+        width: 100%;
+    }
+    .Aboutleft h1{
+        color: red;
+        justify-content: center;
+    }
+    .Aboutright{
+        margin-bottom: 5em;
+        width: 100%;
+    }
+
+    
+}
+@media screen and (max-width: 1400px){
+    .About{
+        display: grid;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+    .Aboutright{
+        margin-bottom: 2em;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 960px){
+    .About{
+        display: grid;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        background-color: darkblue;
+    }
+    .Aboutright{
+        margin-bottom: 2em;
+        width: 100%;
+    }
+}

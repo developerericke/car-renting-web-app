@@ -1,5 +1,7 @@
 import React,{useState} from 'react'
 import './Cards.css'
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const notes =[
     {

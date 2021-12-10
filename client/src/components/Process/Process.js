@@ -28,12 +28,12 @@ const Process = () => {
             our auto and set a<br />
             pickup date / time
           </p>
-          <p>
+          <h3>
             Once seected, Book
             <br />
             our auto and set a<br />
             pickup date / time
-          </p>
+          </h3>
         </div>
         </h1>
       </div>

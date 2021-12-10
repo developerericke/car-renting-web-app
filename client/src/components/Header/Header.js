@@ -1,38 +1,48 @@
 import React,{useState,useEffect} from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import "./Header.css";
 import Select from "react-select";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import TextField from '@material-ui/core/TextField';
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import Photo from './7.jpg';
 
-const options = [
-  { value: "Volvo", label: "Volvo" },
-  { value: "Mercedes", label: "Mercedes" },
-  { value: "Prado", label: "Prado" },
-  { value: "Subaru", label: "Subaru" },
-  { value: "Toyota Cruiser", label: "Toyota Cruiser" },
-];
+const myOptions = ['Volvo', 'Mercedes', 'Prado', 'Subaru', 'Toyota Cruiser'];
 const Header = () => {
-  const [startDate, setStartDate] = useState(new Date());
   useEffect(()=>{
     Aos.init();
   },[]);
   return (
     <div className="Header">
-      <div className="header1" data-aos="fade-right" data-aos-delay='100'>
-        <h1>Book Your Auto Rental</h1>
-        <h2>Luxury Cars at low-cost, starts $75 / day</h2>
-        <p>from over 100 premium locations</p>
+      <div className="header1" data-aos="fade-right" data-aos-delay='50'>
+        <h1>Rent today</h1>
+        <img src={Photo} alt="image"/>
       </div>
-      <div className="header2" data-aos="fade-left" data-aos-delay='100'>
-        <label>PICK-UP DATE</label>
-        <input type="date" id="myDate"/>
-        <label>DROP-OFF DATE</label>
-        <input type="date" id="myDate"/>
-        <label>MAKERS OF VEHICLE</label>
-        <Select options={options} width="50em" style={{ background: "#f0f0f0" }}/>
-        <button>FIND IT NOW</button>
+      <div className="header2" data-aos="fade-left" data-aos-delay='50'>
+        <div>
+          <h1>Book</h1>
+        </div>
+        <label>Picking up Date</label>
+        <input type="date"/>
+        <label>Dropping of  Date</label>
+        <input type="date"/>
+        <label>Picking up Hour</label>
+        <input type="time"/>
+        <label>Dropping off Hour</label>
+        <input type="time"/>
+        <label>Choose vehicle</label>
+        <Autocomplete
+        style={{width:'90%',height:'50%'}}
+        autoSelect
+        options={myOptions}
+        renderInput={(params) => (
+          <TextField {...params}
+            variant="outlined"
+            label="Choose a Car"
+           />
+        )}
+      />
+        <button>Rent a Car</button>
       </div>
       <div class="custom-shape-divider-bottom-1638880450">
         <svg

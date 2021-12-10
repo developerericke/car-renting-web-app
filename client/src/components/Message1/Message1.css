@@ -1,0 +1,14 @@
+.messo{
+    background-color: black;
+    color: #fff;
+    font-size: 15px;
+    font-family: fantasy;
+    justify-content: center;
+    align-items: center;
+    margin-top: -0.3em;
+}
+.Cr{
+    opacity: 2em;
+    margin-bottom: 2em;
+    color: black;
+}

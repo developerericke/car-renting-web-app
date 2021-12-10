@@ -30,5 +30,11 @@
 }
 
 .custom-shape-divider-bottom-1638941787 .shape-fill {
-    fill: #b6b0b0;
+    fill: darkblue;
+}
+@media screen and (max-width: 960px){
+    .Carousel{
+        display: grid;
+        position: relative;
+    }
 }

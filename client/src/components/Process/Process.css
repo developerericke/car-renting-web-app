@@ -37,3 +37,25 @@
 .custom-shape-divider-bottom-1638883986 .shape-fill {
     fill: #FFFFFF;
 }
+@media screen and (max-width: 960px){
+    .process{
+        display: grid;
+        position: relative;
+        background-image: url("dark.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: -5em;
+    }
+    .details h1{
+        color: red;
+    }
+    .work{
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+
+    }
+    .work h3{
+        margin-bottom: 7em;
+    }
+}

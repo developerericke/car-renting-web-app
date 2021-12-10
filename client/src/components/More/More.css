@@ -1,12 +1,87 @@
 .More{
-    background-color: #b6b0b0;
+    background-color: darkblue;
     min-height: 50vh;
+    color: #fff;
 }
 .more1{
     float: left;
-    width: 50%;
+    width: 40%;
+    margin-left: 10em;
+    margin-top: 4em;
+    font-size: 15px;
 }
 .more2{
     float: right;
-    width: 50%;
+    width: 40%;
+    margin-right: 15em;
+}
+.more2 img{
+    border-radius: 50%;
+    border: 2px solid #fff;
+    width: 24%;
+    height: 30%;
+}
+.img2{
+    margin-top: -3em;
+    margin-right: 10em;
+}
+.img3{
+    margin-top: -2em;
+    margin-left: 4em;
+}
+@media screen and (max-width: 1400px{
+    .More{
+        position: relative;
+        display: grid;
+    }
+    .more2 img{
+        border-radius: 50%;
+        width: 50vh;
+        border: 2px solid #fff;
+        margin-bottom: 3em;
+        justify-content: center;
+        text-align: center;
+    }
+    .img2{
+        margin-top: -7em;
+        margin-right: 20em;
+    }
+    .img3{
+        margin-top: -5em;
+        margin-left: 10em;
+    }
+}
+@media screen and (max-width: 960px){
+    .More{
+        position: relative;
+        display: grid;
+    }
+    .more2 img{
+        border-radius: 50%;
+        width: 50vh;
+        border: 2px solid #fff;
+        margin-bottom: 3em;
+        justify-content: center;
+        text-align: center;
+    }
+    .img2{
+        margin-top: -7em;
+        margin-right: 20em;
+    }
+    .img3{
+        margin-top: -5em;
+        margin-left: 10em;
+    }
+}
+@media screen and (max-width: 450px){
+    .More{
+        position: relative;
+        display: grid;
+    }
+}
+@media screen and (max-width: 1400px){
+    .More{
+        position: relative;
+        display: grid;
+    }
 }

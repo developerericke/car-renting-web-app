@@ -1,11 +1,14 @@
 import React from 'react'
 import './Customer.css'
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Customer = () => {
     return (
         <div className="customer">
-            <h1>CUSTOMER REVIEWS</h1>
-            <h3>Luxury AutoStar Rental Services</h3>
+            <h3>Do you have any question or anything else</h3>
+            <h1>CUSTOMER SERVICE</h1>
+            
         </div>
     )
 }

@@ -1,0 +1,23 @@
+.head1{
+    background-color:black;
+    color: #fff;
+    min-height: 20vh;
+}
+.head h1{
+    color: #fff;
+}
+.head p{
+    color: #fff;
+}
+
+@media screen and (max-width: 960px){
+    .head1{
+        flex-direction: column;
+        justify-content: center;   
+        position: relative;
+        background-color: darkblue;
+    }
+    .head1 p {
+        margin-bottom: 2em;
+    }
+}

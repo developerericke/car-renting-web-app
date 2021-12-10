@@ -2,8 +2,7 @@ const router = require("express").Router();
 //data validation
 const {body} = require('express-validator');
 
-const{homePage,register,registerPage,login,loginPage,} = require('../controllers/userController');
-
+const{homePage,register,registerPage,login,loginPage,passwordResetLink} = require('../controllers/userController');
 
 const ifNotLoggedin = (req, res, next) => {
     if(!req.session.userID){
@@ -19,7 +18,8 @@ const ifLoggedin = (req,res,next) => {
     next();
 }
 
-router.get('/home', ifNotLoggedin, homePage);
+
+router.get('/home',ifNotLoggedin, homePage);
 
 router.get("/login", ifLoggedin, loginPage);
 
@@ -43,7 +43,7 @@ router.get("/signup", ifLoggedin, registerPage);
 
 router.post(
     "/signup",
-    ifLoggedin,
+    
     [
         body("_name", "The name must be of minimum 3 characters length")
             .notEmpty()
@@ -69,5 +69,9 @@ router.get('/logout', (req, res, next) => {
     });
     res.redirect('/login');
 });
+
+router.get('/recover/account', passwordResetLink);
+
+
 
 module.exports = router;

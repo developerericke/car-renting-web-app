@@ -4,9 +4,9 @@
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url('https://media.istockphoto.com/photos/car-view-picture-id911192004?k=20&m=911192004&s=612x612&w=0&h=gGxL3TucurA6qM80Wl_LYo9wkFrRAWQ8qwK8UooKxSg=');
-    background-color: #02026d;
+    background-color: rgb(14, 7, 7);
     min-height: 100vh;
+    
 }
 .header1{
     color: #fff;
@@ -14,30 +14,31 @@
     width: 50%;
     
 }
+.header1  img{
+    width: 100vh;
+    height: 90vh;
+    border-radius: 60%;
+}
 .header2{
-    margin-top: 10em;
-    color: #fff;
+    margin-top: 5em;
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 27%;
     float: right;
     align-items: center;
-    border-radius: 10px;
-    border-width: 10em;
-    border: 1px solid whitesmoke;
-    margin-right: 10em;
+    background-color: #fff;
+    border-radius: 1px;
+    border-width: 1em;
+    margin-right: 20em;
 }
 .header1 h1{
     color: red;
-    margin-top: 4em;
-    font-size: 45px;
-    font-weight: bold;
+    font-size: 30px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.header1 h2{
+.header2 h1{
     color: #fff;
     font-size: 27px;
-    margin-top: 1em;
 }
 .header1 p{
     color: #fff;
@@ -46,16 +47,17 @@
 }
 .header2 label{
     font-size: 12px;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     color: red;
+    width: 28%;
 }
 .header2 input{
-    background-color: white;
+    background-color: transparent;
     color: black;
     height:3.5em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     font-size: 10px;
-    width: 50em;
+    width: 35em;
     font-size: 11px;
 }
 .header2 Select{
@@ -64,7 +66,7 @@
     margin-bottom: 2em;
 }
 .header2 button{
-    margin-top: 2em;
+    margin-top: 1em;
     width: 20%;
     height:3em;
     text-align: center;
@@ -73,7 +75,8 @@
     border-radius: 0%;
     background-color: red;
     color: #fff;
-}
+    margin-bottom: 1em;
+ }
 .custom-shape-divider-bottom-1638880450 {
     position: absolute;
     bottom: 0;
@@ -93,5 +96,103 @@
 }
 
 .custom-shape-divider-bottom-1638880450 .shape-fill {
-    fill: #FFFFFF;
+    fill: black;
+} 
+@media screen and (max-width: 1400px){
+    .Header{
+        display: grid;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+    .header1{
+        width: 50%;
+        left: -100%;
+    }
+    .header1 img{
+        width: 100%;
+        height: 60vh;
+    }
+    .header2 input{
+      width: 100%;  
+    }
+    .header2{
+        margin-bottom: 16em;
+        width: 50%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .Header{
+        display: grid;
+        position: relative;
+    }
+    .header1{
+        width: 50%;
+        left: -100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .header1 img{
+        width: 100%;
+        height: 60vh;
+    }
+    .header2 input{
+      width: 100%;  
+    }
+    .header2{
+        margin-bottom: 16em;
+        width: 50%;
+        margin-left: 20em;
+    }
+  }
+@media  screen and (max-width: 960px) {
+   .Header{
+    display: gid;
+    position: relative;
+   }
+   .header1{
+    width: 78%;
+    left: -100%;
+    align-items: center;
+    justify-content: center;
+   }
+   .header1 img{
+    width: 100%;
+        height: 60vh;
+   }
+   .header2 input{
+    width: 100%;  
+   }
+   .header2{
+    margin-bottom: 16em;
+    width: 50%;
+    margin-right: 50em;
+   }
+   .custom-shape-divider-bottom-1638880450 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1638880450 svg {
+    position: relative;
+    display: block;
+    width: calc(169% + 1.3px);
+    height: 174px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1638880450 .shape-fill {
+    fill: darkblue;
+} 
+}
+@media  screen and (max-width: 450px) {
+   .header{
+    display: grid;
+    position: relative;
+   }
 }
