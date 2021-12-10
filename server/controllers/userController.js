@@ -24,7 +24,10 @@ function email_sender_is_active(){
 
     email_transport.verify(function (error, success) {
         if (error) {
+<<<<<<< HEAD
           console.log(error)  
+=======
+>>>>>>> 58eb1182072022b9304d061a8de1f37d0b01f584
           return false;
         } else {
           return true;
@@ -161,19 +164,29 @@ exports.passwordResetLink = async (req, res, next) => {
          
          //try and send to email,if succeeds, add to database
          if (email_sender_is_active() == false){
+<<<<<<< HEAD
              console.log("mailserver off")
+=======
+>>>>>>> 58eb1182072022b9304d061a8de1f37d0b01f584
                res.status(500).json({"message": "Internal server error."});
          }else{
       
              email_transport.sendMail({
                 from: "developer.ericke@gmail.com",
+<<<<<<< HEAD
                 to: "wilsonkaroki6205@gmail.com",
+=======
+                to: "nderituericke@gmail.com",
+>>>>>>> 58eb1182072022b9304d061a8de1f37d0b01f584
                 subject: "Account Action",
                 //text: "Developer test ",
                 html: "<h3 style='text-decoration:underline;font-weight:bold;text-align:center'>Password Reset</h3> <p>Click on the link below to reset your password.</p><br><a ' href='http://localhost:5000/reset-password?token="+generated_token+"'>Reset Password</a> <br> <p>This link will expire in 24 hours.</p>"
 
              },(err,info)=>{
+<<<<<<< HEAD
                  
+=======
+>>>>>>> 58eb1182072022b9304d061a8de1f37d0b01f584
      
                  if (err) return  res.status(500).json({"message": "Internal server error."});
               
@@ -183,6 +196,7 @@ exports.passwordResetLink = async (req, res, next) => {
                           sql_insert = "INSERT INTO `T_action_tokens` (`User_email`,`Token_type`,`Token`,`Token_expiry`) VALUES(?,?,?,?)";
 
                          const token_expiry = moment().add(1, 'days').format('YYYY-MM-DD HH:mm:ss')  
+<<<<<<< HEAD
                          console.log(token_expiry)
                             
                             db.execute(sql_insert,[userEmail,"reset",generated_token,token_expiry])
@@ -190,13 +204,24 @@ exports.passwordResetLink = async (req, res, next) => {
                                console.log(dbres[0].affectedRows)
                                if (dbres[0].affectedRows !== 1) {
                                 console.log(dbres[0].affectedRows)
+=======
+                     
+                            
+                            db.execute(sql_insert,[userEmail,"reset",generated_token,token_expiry])
+                           .then((dbres)=>{
+                               if (dbres.affectedRows !== 1) {
+>>>>>>> 58eb1182072022b9304d061a8de1f37d0b01f584
                                 res.status(500).json({"message": "Internal server error."});
                                }else{ 
                                 res.status(200).json({"message": "Password reset link sent to your email."});
                                }
                                  
                              }).catch((err)=>{
+<<<<<<< HEAD
                                  console.log(err)
+=======
+                          
+>>>>>>> 58eb1182072022b9304d061a8de1f37d0b01f584
                                  res.status(500).json({"message": "Internal server error."});
                              })                         
 

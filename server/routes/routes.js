@@ -3,9 +3,15 @@ const router = require("express").Router();
 const {body} = require('express-validator');
 
 const{homePage,register,registerPage,login,loginPage,passwordResetLink} = require('../controllers/userController');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 58eb1182072022b9304d061a8de1f37d0b01f584
 
 const ifNotLoggedin = (req, res, next) => {
+
     if(!req.session.userID){
+        
         return res.redirect('/login');
     }
     next();
@@ -18,12 +24,24 @@ const ifLoggedin = (req,res,next) => {
     next();
 }
 
+<<<<<<< HEAD
 
 router.get('/home',ifNotLoggedin, homePage);
+=======
+const isLoggedIn = (req,res,next) => {
+     if(req.session.userID == undefined){
+        return res.redirect('/login');
+    }
+    next()
+}
 
-router.get("/login", ifLoggedin, loginPage);
+>>>>>>> 58eb1182072022b9304d061a8de1f37d0b01f584
 
-router.post("/login",ifLoggedin,
+router.get('/home',isLoggedIn, homePage);
+
+router.get("/login", isLoggedIn, loginPage);
+
+router.post("/login",
     [
         body("_email", "Invalid email address")
             .notEmpty()
@@ -39,7 +57,7 @@ router.post("/login",ifLoggedin,
 );
 
 //getting the registration page
-router.get("/signup", ifLoggedin, registerPage);
+router.get("/signup", isLoggedIn, registerPage);
 
 router.post(
     "/signup",
