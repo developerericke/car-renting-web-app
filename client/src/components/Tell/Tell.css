@@ -1,0 +1,17 @@
+.Tell{
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    background-color: darkblue;
+    background-image:  url('');
+    min-height: 100vh;
+    margin-top: -0.7em;
+    color: #fff;
+}
+.us h1{
+    margin-bottom: 4em;
+}
+.c{
+    color: darkblue;
+    margin-bottom: 2em;
+}

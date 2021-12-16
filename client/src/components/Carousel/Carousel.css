@@ -37,4 +37,7 @@
         display: grid;
         position: relative;
     }
+    .head p{
+        margin-bottom: 10em;
+    }
 }

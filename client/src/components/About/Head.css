@@ -15,7 +15,7 @@
         flex-direction: column;
         justify-content: center;   
         position: relative;
-        background-color: darkblue;
+        background-color: black;
     }
     .head1 p {
         margin-bottom: 2em;

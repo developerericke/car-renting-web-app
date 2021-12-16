@@ -1,7 +1,7 @@
 .footers{
     color: #fff;
-    min-height: 7vh;
-    background-color: black;
+    min-height: 9vh;
+    background-color: rgb(22, 11, 11);
 }
 .footer1{
     float: left;
@@ -12,4 +12,22 @@
 .footer2{
     float: right;
     width: 50%;
+}
+@media screen and(max-width: 960px){
+    .footers{
+        display: flex;
+        position: relative;
+        margin-top: 10em;
+        justify-content: center;
+        text-align: center;
+    }
+}
+@media screen and(max-width: 1400px){
+    .footers{
+        display: flex;
+        position: relative;
+        margin-top: 10em;
+        justify-content: center;
+        text-align: center;
+    }
 }

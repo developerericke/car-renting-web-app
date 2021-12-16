@@ -6,6 +6,7 @@ body {
   font-family: "Playfair Display", serif;
   font-family: "PT Sans", sans-serif;
   font-family: "Zen Old Mincho", serif;
+  min-height: 100vh;
 }
 h1{
   font-family: cursive;

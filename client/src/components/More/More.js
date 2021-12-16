@@ -30,9 +30,9 @@ const More = () => {
       </div>
       
       <div className="more2">
-        <div className="img1"><img src={Photo} alt="Image"/></div>
-        <div className="img2"><img src={Photo1} alt="Image"/></div>
-        <div className="img3"><img src={Photo2} alt="Image"/></div>
+        <div className="img1"><img src={Photo} alt="car"/></div>
+        <div className="img2"><img src={Photo1} alt="car"/></div>
+        <div className="img3"><img src={Photo2} alt="car"/></div>
       </div>
     </div>
   );

@@ -1,0 +1,10 @@
+.booking{
+    width: 100%;
+}
+table{
+    width: 100%;
+    min-height: 10vh;
+}
+table , th, td{
+    border: 1px solid black;
+}

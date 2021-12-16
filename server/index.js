@@ -1,3 +1,4 @@
+const cookieParser = require('cookie-parser');
 const express = require('express');
 const session = require('express-session');
 const path = require('path');
@@ -5,14 +6,13 @@ const routes = require('./routes/routes');
 const app = express();
 var MySQLStore = require('express-mysql-session')(session);
 
-
+//setting up ejs
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(express.json());
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
-
-
 
 var sessionStore = new MySQLStore(
     {
@@ -33,6 +33,7 @@ app.use(session({
         maxAge: 3600 * 1000, // 1hr
     }
 }));
+
 
 //running static files 
 app.use(express.static(path.join(__dirname, 'public')));

@@ -16,9 +16,6 @@ const Footer = () => {
           >
             <i className="fa fa-facebook-square"></i>
           </a>
-          <a href="" target="_blank" rel="noopener noreferrer">
-            <i className="fa fa-instagram"></i>
-          </a>
           <a
             href="https://twitter.com/willy_youngDev"
             target="_blank"

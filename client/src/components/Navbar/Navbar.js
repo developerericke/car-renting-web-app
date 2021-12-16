@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import './Navbar.css'
 import Button from './Button'
 import {Link} from 'react-router-dom'
+import NavPic from './nav.png'
 
 const Navbar = () => {
     const [click,setClick] = useState(false);
@@ -14,7 +15,7 @@ const Navbar = () => {
         <>
             <nav className="navbar">
             <div className="listItem">
-                    <img className="tech" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHRlY2hub2xvZ3klMjBvZmZpY2V8ZW58MHx8MHx8&w=1000&q=80" alt="img"/>
+                    <img className="tech" src={NavPic} alt="img"/>
                 </div>
                 <Link to="/" className="navbar-logo">CarHire</Link>
                 <div className="menu-icon" onClick={handleClick}>
@@ -28,8 +29,8 @@ const Navbar = () => {
                     </li>
 
                     <li className='nav-item' >
-                        <Link to='/services' className="nav-links" 
-                        onClick={closeMenu}>Services </Link>
+                        <Link to='/cars' className="nav-links" 
+                        onClick={closeMenu}>Cars </Link>
                         
                     </li>
                     <li className='nav-item'>
@@ -37,16 +38,12 @@ const Navbar = () => {
                         onClick={closeMenu}>About </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/company' className="nav-links" 
-                        onClick={closeMenu}>Company </Link>
+                        <Link to='/bookings' className="nav-links" 
+                        onClick={closeMenu}>MyBookings </Link>
                         
                     </li>
                     <li className='nav-item'>
-                        <Link to='/media' className="nav-links" 
-                        onClick={closeMenu}>Media </Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link to='/contacts' className="nav-links" 
+                        <Link to='/contact' className="nav-links" 
                         onClick={closeMenu}>Contacts</Link>
                     </li>
                     <li className='nav-item'>

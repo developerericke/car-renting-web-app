@@ -1,6 +1,7 @@
 .inside{
     text-align: center;
     display: flex;
+    width: 100%;
     justify-content: center;
     color: #fff;
     font-size: 25px;

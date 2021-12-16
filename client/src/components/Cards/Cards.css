@@ -20,7 +20,7 @@
 @media screen and (min-width:960px) {
     .content{
         grid-template-columns: repeat(3,1fr);
-    }    
+    }   
 }
 .project1{
     background: white;

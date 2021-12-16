@@ -1,6 +1,5 @@
 import React from 'react'
 import './Message1.css'
-import Aos from "aos";
 import "aos/dist/aos.css";
 
 const Message1 = () => {

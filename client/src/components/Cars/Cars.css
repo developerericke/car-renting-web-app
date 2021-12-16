@@ -1,0 +1,8 @@
+.car{
+    height: 100vh;
+}
+.card-img-top{
+    width: 300px;
+    height: 200px;
+    object-fit: contain;
+}

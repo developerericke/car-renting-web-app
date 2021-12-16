@@ -1,6 +1,5 @@
 import React from "react";
 import "./Message.css";
-import Aos from "aos";
 import "aos/dist/aos.css";
 
 const Message = () => (
@@ -8,7 +7,7 @@ const Message = () => (
     <div className="wrap2" data-aos="fade-right" data-aos-delay="50">
       <img
         src="https://images.pexels.com/photos/248747/pexels-photo-248747.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-        alt="Image"
+        alt="car"
       />
     </div>
     <div className="wrap3" data-aos="fade-left" data-aos-delay="50">
