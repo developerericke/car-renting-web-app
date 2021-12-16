@@ -8,37 +8,43 @@
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: -2em;
-    background-image: url('h.jpg');
+    background-image: url('rent.jpg');
+    object-fit: contain;
 }
 .rent h1{
-    margin-bottom: 10em;
+    margin-bottom: 6em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     opacity: 0.5;
     color: rgb(90, 89, 89);
 }
 .first h1{
-    font-size: 40px;
+    font-size: 45px;
+    margin-bottom: 1em;
+    color: red;
 }
 .second h2{
-    font-size: 30px;
+    font-size: 32px;
+    color: #fff;
 }
-.custom-shape-divider-bottom-1638984573 {
+.custom-shape-divider-bottom-1639666289 {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1638984573 svg {
+.custom-shape-divider-bottom-1639666289 svg {
     position: relative;
     display: block;
-    width: calc(130% + 1.3px);
-    height: 191px;
+    width: calc(105% + 1.3px);
+    height: 143px;
+    transform: rotateY(180deg);
 }
 
-.custom-shape-divider-bottom-1638984573 .shape-fill {
+.custom-shape-divider-bottom-1639666289 .shape-fill {
     fill: black;
 }
 @media screen and (max-width: 1110px) {
