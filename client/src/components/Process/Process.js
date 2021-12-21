@@ -6,7 +6,7 @@ import Videos from "../Videos/video2.mp4";
 const Process = () => {
   return (
     <div className="process">
-      <div>
+      <div className="video">
         <VideoBg>
           <VideoBg.Source src={Videos} type="video/mp4" />
         </VideoBg>

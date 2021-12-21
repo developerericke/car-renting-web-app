@@ -4,6 +4,7 @@ import Car from './car.png'
 
 const About = () => {
   return (
+    <section id="about">
     <div className="About">
       <div className="Aboutleft" data-aos="zoom-in" data-aos-delay='50'>
         <h1>Welcome To Carspace</h1>
@@ -44,6 +45,7 @@ const About = () => {
         </svg>
       </div>
     </div>
+    </section>
   );
 };
 

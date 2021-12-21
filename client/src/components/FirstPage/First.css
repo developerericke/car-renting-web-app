@@ -35,7 +35,46 @@
     line-height: 0;
     transform: rotate(180deg);
 }
+.floating-icon{
+    background-color: darkblue;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 15em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
 
+.floating-icon a{
+    border: 1px solid #fff;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mouse{
+    transform: translateY(-25%);
+    animation: bounce .8s ease infinite alternate;
+}
+@keyframes bounce {
+    0%{
+        transform: translateY(-25%);
+    }
+    100%{
+        transform: translateY(25%);
+    }
+}
 .custom-shape-divider-bottom-1639666289 svg {
     position: relative;
     display: block;

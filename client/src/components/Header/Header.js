@@ -12,6 +12,7 @@ const Header = () => {
     Aos.init();
   },[]);
   return (
+    <section id="features">
     <div className="Header">
       <div className="header1" data-aos="fade-right" data-aos-delay='50'>
         <h1>Rent today</h1>
@@ -44,6 +45,7 @@ const Header = () => {
         <button>Rent a Car</button>
       </div>
     </div>
+    </section>
   );
 };
 
