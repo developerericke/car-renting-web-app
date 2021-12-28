@@ -17,7 +17,7 @@ const Navbar = () => {
             <div className="listItem">
                     <img className="tech" src={NavPic} alt="img"/>
                 </div>
-                <Link to="/" className="navbar-logo">CarHire</Link>
+                <h1 className="navbar-logo">CarHire</h1>
                 <div className="menu-icon" onClick={handleClick}>
                     <i className={click ? 'fa fa-times' : 'fa fa-bars'}></i>
                 </div>
@@ -28,9 +28,14 @@ const Navbar = () => {
                         onClick={closeMenu}>Home</Link>
                     </li>
 
-                    <li className='nav-item' >
+                    {/* <li className='nav-item' >
                         <Link to='/cars' className="nav-links" 
                         onClick={closeMenu}>Cars </Link>
+                        
+                    </li> */}
+                    <li className='nav-item'>
+                        <Link to='/upload' className="nav-links" 
+                        onClick={closeMenu}>Uploads </Link>
                         
                     </li>
                     <li className='nav-item'>

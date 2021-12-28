@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState,useEffect} from "react";
 import categories from "./Category";
 import './Cars.css'
 
@@ -17,6 +17,7 @@ const Cars = () => {
       <div className="container-fluid mx-2">
         <div className="row mt-5 mx-2">
           <div className="col-md-3">
+          <button className="btn btn-warning w-100 mb-4" onClick={()=>setData(categories)}>All</button>
             <button className="btn btn-warning w-100 mb-4" onClick={()=>filterResult('Casual')}>Casual Cars</button>
             <button className="btn btn-warning w-100 mb-4" onClick={()=>filterResult('SUV')}>
               SUV (Sports utility vehicle)
@@ -24,7 +25,7 @@ const Cars = () => {
             <button className="btn btn-warning w-100 mb-4" onClick={()=>filterResult('Trucks')}>Trucks</button>
             <button className="btn btn-warning w-100 mb-4" onClick={()=>filterResult('Pick-up')}>Pick-Up</button>
             <button className="btn btn-warning w-100 mb-4" onClick={()=>filterResult('Convertible')}>Convertible</button>
-            <button className="btn btn-warning w-100 mb-4" onClick={()=>setData(categories)}>All</button>
+            
           </div>
           <div className="col-md-9">
             <div className="row">

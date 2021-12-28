@@ -2,7 +2,19 @@
     background-color: #fff;
     margin-top: -1em;
     position: relative;
-    min-height: 80vh;
+    min-height: 40vh;
+}
+.caroul{
+    width: 70%;
+    text-align: center;
+    justify-content: center;
+    border: 2px;
+    
+}
+.caroul img{
+    width: 40%;
+    height: 30%;
+    border-radius: 30px;
 }
 .Carousel p{
     margin-bottom: 3em;

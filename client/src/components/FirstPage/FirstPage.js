@@ -12,7 +12,7 @@ const FirstPage = () => {
   return (
     <div className="page">
       <div className="rent">
-        <h1>Rent</h1>
+        <h1>.</h1>
       </div>
       <div className="first" data-aos="fade-down" data-aos-delay="50">
         <h1><Random text="WELCOME TO NEW VILE"/> </h1>
@@ -25,11 +25,11 @@ const FirstPage = () => {
       <div className="floating-icon">
         <a href="#features"><BsMouse color="#fff" size={25} className="mouse"/></a>
       </div>
-      <div class="custom-shape-divider-bottom-1639666289">
+      {/* <div class="custom-shape-divider-bottom-1640521754">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+        <path d="M602.45,3.86h0S572.9,116.24,281.94,120H923C632,116.24,602.45,3.86,602.45,3.86Z" class="shape-fill"></path>
     </svg>
-</div>
+</div> */}
     </div>
   );
 };

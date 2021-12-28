@@ -8,7 +8,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: -2em;
-    background-image: url('rent.jpg');
+    background-image: url('p17.jpg');
     object-fit: contain;
 }
 .rent h1{
@@ -26,15 +26,7 @@
     font-size: 32px;
     color: #fff;
 }
-.custom-shape-divider-bottom-1639666289 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
+
 .floating-icon{
     background-color: darkblue;
     width: 5rem;
@@ -75,17 +67,25 @@
         transform: translateY(25%);
     }
 }
-.custom-shape-divider-bottom-1639666289 svg {
-    position: relative;
-    display: block;
-    width: calc(105% + 1.3px);
-    height: 143px;
-    transform: rotateY(180deg);
+/* .custom-shape-divider-bottom-1640521754 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
 }
 
-.custom-shape-divider-bottom-1639666289 .shape-fill {
-    fill: black;
+.custom-shape-divider-bottom-1640521754 svg {
+    position: relative;
+    display: block;
+    width: calc(146% + 1.3px);
+    height: 138px;
 }
+
+.custom-shape-divider-bottom-1640521754 .shape-fill {
+    fill: blue;
+} */
 @media screen and (max-width: 1110px) {
     .page{
         text-align: center;

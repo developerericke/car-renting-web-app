@@ -4,21 +4,20 @@ const session = require('express-session');
 const path = require('path');
 const routes = require('./routes/routes');
 const app = express();
+const fileUpload = require('express-fileupload');
 var MySQLStore = require('express-mysql-session')(session);
-
-//google Auth
-const {OAuth2Client} = require('google-auth-library');
-const CLIENT_ID = '460691002760-unqkpb83m9c16qqcrm6ogrp966gc73es.apps.googleusercontent.com';
-const client = new OAuth2Client(CLIENT_ID);
+const cors = require('cors');
 
 //setting up ejs
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-//middleware
+//middleware 
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
+app.use(fileUpload());
+app.use(cors());
 
 var sessionStore = new MySQLStore(
     {
@@ -39,36 +38,6 @@ app.use(session({
         maxAge: 3600 * 1000, // 1hr
     }
 }));
-
-// app.post('/signin',(req,res)=>{
-//     let token = req.body.token;
-//     console.log(token);
-//     async function verify() {
-//         const ticket = await client.verifyIdToken({
-//             idToken: token,
-//             audience: CLIENT_ID,
-//         });
-//         const payload = ticket.getPayload();
-//         const userid = payload['sub']; //to register user in db
-//         console.log(payload);
-//       }
-//       verify()
-//       .then(()=>{
-//           res.cookie('session-token',token);
-//           res.send('success');
-//       }).catch(console.error);
-//   });
-
-//   app.get('/home',(req,res)=>{
-//       let user = req.user;
-//       res.render('home',{user});
-
-//   });
-
-//   app.get('/logout',(req,res)=>{
-//       res.clearCookie('session-token');
-//       res.redirect('/login');
-//   });
 
 //running static files 
 app.use(express.static(path.join(__dirname, 'public')));

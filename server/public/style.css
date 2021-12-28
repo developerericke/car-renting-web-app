@@ -3,7 +3,9 @@
 *::after {
     box-sizing: border-box;
 }
-
+img{
+    border-radius: 50%;
+}
 html {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -11,28 +13,30 @@ html {
 }
 
 body {
-    background-image: url('https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background: fixed;
+    background-image: url('https://cdn.motor1.com/images/mgl/em3OP/s1/4x3/porsche-911-glowing-wrap.webp');
     object-fit: contain;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Ubuntu", sans-serif;
     margin: 0;
     padding: 0;
-    color: #222222;
-    overflow-x: hidden;
-    overflow-wrap: break-word;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    padding: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    width: 100%;
 }
 
 .container {
     background-color: whitesmoke;
     max-width: 35%;
     margin: 0 auto;
-    padding: 40px;
+    padding: 50px;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
     border-radius: 3px;
+    margin-top: 4em;
+    min-height: 20vh;
 }
 
 .container h1 {
@@ -107,42 +111,190 @@ label {
     border-color: rgba(0, 0, 0, 0.1);
 }
 
-.profile {
+@media only screen and (max-width: 960px) {
+    .rent{
     text-align: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: contain;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
     min-height: 100vh;
-    background-image: url('https://images.pexels.com/photos/10498637/pexels-photo-10498637.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    }
 }
 
-.profile .img {
-    font-size: 50px;
+/* rent page */
+.rent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    color: #fff;
 }
-
-.profile h2 {
-    margin-bottom: 3px;
-    text-transform: capitalize;
+.details{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
 }
-
-.profile span {
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.check{
+    display: flex;
+}
+.rent button{
+    width: 30%;
+    margin-bottom: 2em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.imgs{
+    display: flex;
+    flex-direction: column;
+}
+.rent label{
+    color: #fff;
+}
+.rent .btn2{
+    width: 10%;
+    background-color: red;
+}
+.btn1{
+    margin-bottom: 2em;
+    width: 40%;
+}
+/* home page */
+.profile{
+    margin-top: 3em;
+    height: 30%;
+}
+.right{
+    margin-top: 3em;
+    color: #fff;
+    background-color: transparent;
+}
+.right2{
+    float: right;
+    width: 78%;
+    margin-top: -3em;
+}
+.right img{
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+}
+.right h1{
+    color: red;
+}
+.right h2{
+    color: yellow;
+}
+.sub{
+    margin-bottom: 1em;
+}
+  
+  /* The side navigation menu */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 350px;
+    background-color: #1b0761;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    margin-top: -3em;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
     display: block;
-    margin-bottom: 20px;
-    color: #999999;
-}
-
-.profile a {
-    display: inline-block;
-    padding: 10px 20px;
+    color: rgb(253, 253, 255);
+    padding: 16px;
     text-decoration: none;
-    border: 1px solid #dc3545;
-    color: #dc3545;
-    border-radius: 3px;
-}
+  }
+  .sidebar h1{
+    height: 10.5%;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+ 
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: rgb(10, 170, 37);
+    color: rgb(250, 248, 248);
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 1400px) {
+    .right2 {
+      width: 70%;
+      height: auto;
+      position: relative;
+    }
+  }
+  @media screen and (max-width: 1100px) {
+    .right2 {
+      width: 65%;
+      height: auto;
+      position: relative;
+    }
+  }
+  @media screen and (max-width: 990px) {
+    .right2 {
+      width: 60%;
+      height: auto;
+      position: relative;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .right2 {
+      width: 70%;
+      height: auto;
+      position: relative;
+    }
+  }
+  @media screen and (max-width: 899px) {
+    .right2 {
+      width: 60%;
+      height: auto;
+      position: relative;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+    }
+    .sidebar a {float: none;}
+    div.content {margin-left: 0;}
+  }
 
-.profile a:hover {
-    border-color: rgba(0, 0, 0, 0.1);
-    background-color: #dc3545;
-    color: #ffffff;
-}
+  .table{
+    border: 2px solid black;
+    border-collapse: collapse;
+  }

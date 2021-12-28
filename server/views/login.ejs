@@ -23,38 +23,6 @@
     <div class="err-msg"><%= error %></div>
     <% } %>
     <input type="submit" value="Login" />
-
-    <!-- <div>
-      <div class="jumbotron text-center text-primary">
-        <h1><span class="fa fa-lock"></span> Social Authentication</h1>
-        <p>Login with:</p>
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
-      </div>
-
-      <script>
-        function onSignIn(googleUser) {
-          var id_token = googleUser.getAuthResponse().id_token;
-
-          var xhr = new XMLHttpRequest();
-          xhr.open("POST", "/signin");
-          xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded" );
-          xhr.onload = function () {
-            console.log("Signed in as: " + xhr.responseText);
-          };
-          xhr.send(JSON.stringify({token: id_token}));
-        }
-      </script>
-      <a href="#" onclick="signOut();">Sign out</a>
-      <script>
-        function signOut() {
-          var auth2 = gapi.auth2.getAuthInstance();
-          auth2.signOut().then(function () {
-            console.log("User signed out.");
-          });
-        }
-      </script>
-    </div> -->
-
     <div class="link">
       <p>Don't have an accoun't</p>
       <a href="./signup">Sign Up</a>

@@ -2,6 +2,7 @@
     background-color: darkblue;
     min-height: 50vh;
     color: #fff;
+    margin-top: -5em;
 }
 .more1{
     float: left;
@@ -20,6 +21,9 @@
     border: 2px solid #fff;
     width: 24%;
     height: 30%;
+}
+.img1{
+    margin-top: 3em;
 }
 .img2{
     margin-top: -3em;

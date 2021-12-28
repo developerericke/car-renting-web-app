@@ -232,3 +232,81 @@ exports.passwordResetLink = async (req, res, next) => {
     }
  
 }
+
+exports.rentPage= (req, res,next) => {
+    res.render('Rent');
+   };
+
+//Renting a car saving details to db 
+exports.carRent = (req, res) => {
+    message = '';
+    if(req.method == "POST"){
+       const post  = req.body;
+       const name= post.car_name;
+       const category= post.category;
+       const fuel= post.car_fuel;
+       const expense= post.cost;
+       const seats= post.seat_no;
+
+       if (!req.files)
+            return res.status(400).send('No files were uploaded.');
+  
+         const file = req.files.uploaded_image;
+         const img_name=file.name;
+  
+          if(file.mimetype == "image/jpeg" || file.mimetype == "image/png"|| file.mimetype == "image/gif" ){
+                                  
+               file.mv('public/images/uploaded_images/'+file.name, function(err) {
+                              
+                   if (err) return res.status(500).send(err);
+
+                         const sql = "INSERT INTO `cars`(`car_name`,`category`,`fuel_type`,`price`, `seat_capacity` ,`image`) VALUES ('" + name + "','" + category + "','" + fuel + "','" + expense + "','" + seats + "','" + img_name + "')";
+  
+                            db.query(sql).then(result=>{
+                                res.redirect('/home');
+                            }).catch((err)=>{
+                                console.log(err)
+                                res.status(500).send("err") //render('Rent.ejs',{error: err});
+                            })
+                        })          
+                        
+           } else {
+             message = "This format is not allowed , please upload file with '.png','.gif','.jpg'";
+             res.render('Rent.ejs',{message: message});
+           }
+    } else {
+       res.render('Rent');
+    }  
+};
+
+// Fetching data from mysql to the dasboard with updates
+exports.carAvailable = (req,res)=>{
+    const sql = 'SELECT * FROM cars';
+    db.query(sql).then(result=>{
+        res.render('CarUpdate',{title:'cars',userData:result[0]});
+    }).catch((err)=>{
+        console.log(err)
+        res.status(500).send("err") //render('Rent.ejs',{error: err});
+    });
+}
+
+//fetching to show available cars
+exports.carShowCase = (req,res)=>{
+    const sql = 'SELECT * FROM cars';
+    db.query(sql).then(result=>{
+        res.render('Cars',{title:'cars',userData:result[0]});
+    }).catch((err)=>{
+        console.log(err)
+        res.status(500).send("err") //render('Rent.ejs',{error: err});
+    });
+}
+
+//fetching data for the front end
+exports.cars = (req,res)=>{
+    const sql = 'SELECT * FROM cars';
+   db.query(sql).then(result=>{
+       res.json({data:result[0]});
+   }).catch(err=>{
+       res.status(401).send(err);
+   })
+}

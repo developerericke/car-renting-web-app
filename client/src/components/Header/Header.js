@@ -6,7 +6,7 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import Photo from './7.jpg';
 
-const myOptions = ['Volvo', 'Mercedes', 'Prado', 'Subaru', 'Toyota Cruiser'];
+const myOptions = ['Volvo', 'Mercedes', 'Prado', 'Subaru', 'Toyota Cruiser','Pick-up','Truck'];
 const Header = () => {
   useEffect(()=>{
     Aos.init();

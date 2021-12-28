@@ -1,0 +1,48 @@
+<%- include('header'); -%>
+
+<div class="container">
+    <h1>New Vile</h1>
+    <form action="/car/rent/" method="POST" enctype="multipart/form-data">
+      <h3>Rent out your Car</h3>
+      <div class="details">
+        <label>Car Name</label>
+        <input type="text" placeholder="name" name="car_name" required/>
+        <label>Category</label>
+        <select required name="category" id="cars" class="cat">
+            <option value="casual">Casual</option>
+            <option value="SVG">Sports Car (SVG)</option>
+            <option value="trucks">Trucks</option>
+            <option value="pick-up">Pick-up</option>
+            <option value="convertible">Convertible</option>
+          </select>
+
+        <label>Fuel Type</label>
+        <select name="car_fuel" required id="cars">
+
+          <option value="petrol">Petrol</option>
+          <option value="diesel">Diesel</option>
+          <option value="cng">CNG</option>
+        </select>
+
+      <label>Price per day</label>
+      <input type="text" name="cost" required/>
+
+      <label>Seat capacity</label>
+      <input type="number" placeholder="number" min="1" required name="seat_no"/>
+      </div>
+      <div class="form-group">
+        <label for="mob_no" class="col-md-3 control-label">Vehicle-Image</label>
+        <div class="col-sm-9">
+            <input class="form-control" type="file" name="uploaded_image" accept=""/>
+        </div>
+    </div> 
+          <div class="sub">
+          <input type="submit" name="submit"/>
+          </div>
+          <button class="btn2"></a><a href="/home">Home Page</a></button></a>
+        </div>
+        
+    </form>
+
+  </div>
+<%- include('footer'); -%>

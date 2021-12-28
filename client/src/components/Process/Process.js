@@ -8,7 +8,7 @@ const Process = () => {
     <div className="process">
       <div className="video">
         <VideoBg>
-          <VideoBg.Source src={Videos} type="video/mp4" />
+          <VideoBg.Source src={Videos} type="video/mp4"/>
         </VideoBg>
       </div>
       <div className="details">

@@ -9,6 +9,11 @@ const {
   login,
   loginPage,
   passwordResetLink,
+  carRent,
+  rentPage,
+  carAvailable,
+  cars,
+  carShowCase
 } = require("../controllers/userController");
 
 const ifNotLoggedin = (req, res, next) => {
@@ -78,5 +83,19 @@ router.get("/logout", (req, res, next) => {
 });
 
 router.get("/recover/account", passwordResetLink);
+
+//getting rent page 
+router.get('/rent', ifNotLoggedin, rentPage); 
+
+router.post('/car/rent', ifNotLoggedin, carRent); 
+
+// getting cars
+
+router.get('/cars/updates',ifNotLoggedin,carAvailable);
+
+//front end fetching
+router.get('/cars',cars);
+
+router.get('/cars/display',ifNotLoggedin,carShowCase);
 
 module.exports = router;
