@@ -305,7 +305,7 @@ exports.carShowCase = (req,res)=>{
 exports.cars = (req,res)=>{
     const sql = 'SELECT * FROM cars WHERE status = "active"';
    db.query(sql).then(result=>{
-       res.json({data:result[0]});
+       res.json({cars:result[0]});
    }).catch(err=>{
        res.status(401).send(err);
    })
@@ -328,7 +328,8 @@ exports.carEdit = (req,res) =>{
     const sql = 'SELECT * FROM cars WHERE id = ?';
     db.query(sql,[req.params.id]).
     then(result=>{
-        res.render('Edit',{title:'cars',userData:result[0]});
+        console.log(result[0][0])
+        res.render('Edit',{title:'cars',userData:result[0][0]});
     }).catch((err)=>{
         console.log(err)
         res.status(500).send("err") //render('Rent.ejs',{error: err});
@@ -344,33 +345,58 @@ exports.carUpdates = (req,res)=>{
        const fuel= post.car_fuel;
        const expense= post.cost;
        const seats= post.seat_no;
+       const id = post.id;
+       let file_saved = false
+       img_name=''//ile.name;
 
-       if (!req.files || Object.keys(req.files).length === 0)
-            return res.status(400).send('No files were uploaded.');
-  
+       if (req.files){
+
          const file = req.files.uploaded_image;
-         const img_name=file.name;
+         img_name=file.name;
   
           if(file.mimetype == "image/jpeg" || file.mimetype == "image/png"|| file.mimetype == "image/gif" ){
                                   
                file.mv('public/images/uploaded_images/'+file.name, function(err) {
                               
                    if (err) return res.status(500).send(err);
-
-                         const sql = "UPDATE cars SET car_name = ?,category =?,fuel_type =?,price =?, seat_capacity = ? ,image =?) WHERE id=? ('" + name + "','" + category + "','" + fuel + "','" + expense + "','" + seats + "','" + img_name + "')";
-  
-                            db.query(sql).then(result=>{
-                                res.redirect('/home');
-                            }).catch((err)=>{
-                                console.log(err)
-                                res.status(500).send("err") //render('Rent.ejs',{error: err});
-                            })
-                        })          
+                   console.log("image saved")
+                   file_saved = true
+                   updateImage(file_saved)
+                 })          
                         
            } else {
              message = "This format is not allowed , please upload file with '.png','.gif','.jpg'";
+             
              res.render('Rent.ejs',{message: message});
            }
+
+       }else{
+        updateImage(file_saved)
+       } 
+         //we have checked if user uploaded files, 
+
+      function updateImage(file_saved){   
+         let sql = ''
+       console.log(file_saved)
+       if (file_saved == true){
+     
+       sql = `UPDATE cars SET car_name = '${name}' ,category ='${category}',fuel_type ='${fuel}',price =${expense}, seat_capacity = ${seats} ,image = '${img_name}' WHERE id = ${id} ;`
+  
+      } else{
+         sql = `UPDATE cars SET car_name = '${name}' ,category ='${category}',fuel_type ='${fuel}',price =${expense}, seat_capacity = ${seats} WHERE id = ${id} ;`
+  
+
+      }
+      console.log(sql)
+
+       db.query(sql).then(result=>{
+           res.redirect('/home');
+       }).catch((err)=>{
+           console.log(err)
+           res.status(500).send("err") //render('Rent.ejs',{error: err});
+       })
+
+    }
     } else {
        res.render('Rent');
     }  
@@ -378,10 +404,15 @@ exports.carUpdates = (req,res)=>{
 
 //deleting inserted car
 exports.deleteCar = (req,res)=>{
-    const sql = 'DELETE FROM cars WHERE id = ?';
-    db.query(sql,[req.params.id]). 
+
+    const sql = `DELETE FROM cars WHERE id = ${req.body.id}`;
+    console.log(sql)
+    db.execute(sql). 
     then(result=>{
-        res.render('CarUpdate',{title:'cars',userData:result[0]});
+        // res.render('CarUpdate',{title:'cars',userData:result[0]});
+        console.log(result)
+       
+        res.redirect('/cars/updates')
     }).catch((err)=>{
         console.log(err)
         res.status(500).send("err") //render('Rent.ejs',{error: err});

@@ -11,7 +11,8 @@ const Upload = () => {
     const getCars =() =>{
         setIsLoading(true);
         Axios.get('http://localhost:5000/cars').then(response=>{
-            setData(response.data.data);
+          console.log(response.data);
+            setData(response.data.cars);
             setIsLoading(false);
            }).catch(err=>{
             setError(err);

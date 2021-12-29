@@ -109,6 +109,9 @@ router.post('/cars/find', carFind);
 router.get('/cars/edit/:id', carEdit);
 
 //deleting car
-router.delete('/delete/:id', deleteCar);
+router.post('/delete/', deleteCar);
+
+//updating data 
+router.post('/cars/edit', carUpdates);
 
 module.exports = router;

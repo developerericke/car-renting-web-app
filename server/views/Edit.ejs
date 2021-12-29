@@ -19,9 +19,10 @@
       <h3>Rent out your Car</h3>
       <div class="details">
         <label>Car Name</label>
-        <input type="text" placeholder="name" name="car_name" required/>
+        <input type="text" name="id" value="<%=userData.id %>" class="d-none">
+        <input type="text" placeholder="name" name="car_name"  value="<%=userData.car_name %>" required/>
         <label>Category</label>
-        <select required name="category" id="cars" class="cat">
+        <select required name="category" id="cars" class="cat" value="<%=userData.category %>">
             <option value="casual">Casual</option>
             <option value="SVG">Sports Car (SVG)</option>
             <option value="trucks">Trucks</option>
@@ -30,7 +31,7 @@
           </select>
 
         <label>Fuel Type</label>
-        <select name="car_fuel" required id="cars">
+        <select name="car_fuel" required id="cars" value="<%=userData.fuel_type %>">
 
           <option value="petrol">Petrol</option>
           <option value="diesel">Diesel</option>
@@ -38,15 +39,16 @@
         </select>
 
       <label>Price per day ($)</label>
-      <input type="number" name="cost" required min="1"/>
+      <input type="number" name="cost" value="<%=userData.price %>" required min="1" />
 
       <label>Seat capacity</label>
-      <input type="number" placeholder="number" min="1" required name="seat_no"/>
+      <input type="number" placeholder="number" min="1" required value="<%=userData.seat_capacity %>" name="seat_no"/>
       </div>
       <div class="form-group">
         <label for="mob_no" class="col-md-3 control-label">Vehicle-Image</label>
         <div class="col-sm-9">
-            <input class="form-control" type="file" name="uploaded_image" accept=""/>
+          <img width="50%" height="20%" src="http://localhost:5000/images/uploaded_images/<%=userData.image %>"/>
+            <input class="form-control" type="file" name="uploaded_image" accept="" value="http://localhost:5000/images/uploaded_images/<%=userData.image %>"/>
         </div>
     </div> 
           <div class="sub">
