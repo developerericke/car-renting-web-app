@@ -248,7 +248,7 @@ exports.carRent = (req, res) => {
        const expense= post.cost;
        const seats= post.seat_no;
 
-       if (!req.files)
+       if (!req.files || Object.keys(req.files).length === 0)
             return res.status(400).send('No files were uploaded.');
   
          const file = req.files.uploaded_image;
@@ -290,9 +290,9 @@ exports.carAvailable = (req,res)=>{
     });
 }
 
-//fetching to show available cars
+//fetching to show available cars in the dashboard
 exports.carShowCase = (req,res)=>{
-    const sql = 'SELECT * FROM cars';
+    const sql = 'SELECT * FROM cars WHERE status = "active"';
     db.query(sql).then(result=>{
         res.render('Cars',{title:'cars',userData:result[0]});
     }).catch((err)=>{
@@ -301,12 +301,89 @@ exports.carShowCase = (req,res)=>{
     });
 }
 
-//fetching data for the front end
+//fetching data for the front end (ReactJs)
 exports.cars = (req,res)=>{
-    const sql = 'SELECT * FROM cars';
+    const sql = 'SELECT * FROM cars WHERE status = "active"';
    db.query(sql).then(result=>{
        res.json({data:result[0]});
    }).catch(err=>{
        res.status(401).send(err);
    })
+}
+
+//finding car by category using search
+exports.carFind = (req,res)=>{
+    const searchCar = req.body.search;
+    db.query('SELECT * FROM cars WHERE category LIKE ?', ['%' + searchCar + '%'],).
+    then(result=>{
+        res.render('Cars',{title:'cars',userData:result[0]});
+    }).catch((err)=>{
+        console.log(err)
+        res.status(500).send("err") //render('Rent.ejs',{error: err});
+    });
+}
+
+//rendering the update page
+exports.carEdit = (req,res) =>{
+    const sql = 'SELECT * FROM cars WHERE id = ?';
+    db.query(sql,[req.params.id]).
+    then(result=>{
+        res.render('Edit',{title:'cars',userData:result[0]});
+    }).catch((err)=>{
+        console.log(err)
+        res.status(500).send("err") //render('Rent.ejs',{error: err});
+    });  
+}
+//updating inserted car details
+exports.carUpdates = (req,res)=>{
+    message = '';
+    if(req.method == "POST"){
+       const post  = req.body;
+       const name= post.car_name;
+       const category= post.category;
+       const fuel= post.car_fuel;
+       const expense= post.cost;
+       const seats= post.seat_no;
+
+       if (!req.files || Object.keys(req.files).length === 0)
+            return res.status(400).send('No files were uploaded.');
+  
+         const file = req.files.uploaded_image;
+         const img_name=file.name;
+  
+          if(file.mimetype == "image/jpeg" || file.mimetype == "image/png"|| file.mimetype == "image/gif" ){
+                                  
+               file.mv('public/images/uploaded_images/'+file.name, function(err) {
+                              
+                   if (err) return res.status(500).send(err);
+
+                         const sql = "UPDATE cars SET car_name = ?,category =?,fuel_type =?,price =?, seat_capacity = ? ,image =?) WHERE id=? ('" + name + "','" + category + "','" + fuel + "','" + expense + "','" + seats + "','" + img_name + "')";
+  
+                            db.query(sql).then(result=>{
+                                res.redirect('/home');
+                            }).catch((err)=>{
+                                console.log(err)
+                                res.status(500).send("err") //render('Rent.ejs',{error: err});
+                            })
+                        })          
+                        
+           } else {
+             message = "This format is not allowed , please upload file with '.png','.gif','.jpg'";
+             res.render('Rent.ejs',{message: message});
+           }
+    } else {
+       res.render('Rent');
+    }  
+}
+
+//deleting inserted car
+exports.deleteCar = (req,res)=>{
+    const sql = 'DELETE FROM cars WHERE id = ?';
+    db.query(sql,[req.params.id]). 
+    then(result=>{
+        res.render('CarUpdate',{title:'cars',userData:result[0]});
+    }).catch((err)=>{
+        console.log(err)
+        res.status(500).send("err") //render('Rent.ejs',{error: err});
+    });  
 }

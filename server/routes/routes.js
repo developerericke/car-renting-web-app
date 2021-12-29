@@ -13,7 +13,11 @@ const {
   rentPage,
   carAvailable,
   cars,
-  carShowCase
+  carShowCase,
+  carFind,
+  carEdit,
+  carUpdates,
+  deleteCar
 } = require("../controllers/userController");
 
 const ifNotLoggedin = (req, res, next) => {
@@ -97,5 +101,14 @@ router.get('/cars/updates',ifNotLoggedin,carAvailable);
 router.get('/cars',cars);
 
 router.get('/cars/display',ifNotLoggedin,carShowCase);
+
+//fetching searched car
+router.post('/cars/find', carFind);
+
+//editing car
+router.get('/cars/edit/:id', carEdit);
+
+//deleting car
+router.delete('/delete/:id', deleteCar);
 
 module.exports = router;

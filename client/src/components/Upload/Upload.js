@@ -5,7 +5,7 @@ import { Random } from 'react-animated-text';
 
 const Upload = () => {
     const [data, setData] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false); 
     const [error,setError] = useState();
 
     const getCars =() =>{
