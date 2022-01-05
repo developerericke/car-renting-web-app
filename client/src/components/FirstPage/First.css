@@ -8,11 +8,17 @@
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: -2em;
-    background-image: url('p17.jpg');
+    background-image: url('car6.jpg');
     object-fit: contain;
 }
 .rent h1{
     margin-bottom: 6em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    opacity: 0.5;
+    color: rgb(90, 89, 89);
+}
+.rent1 h1{
+    margin-bottom: 0.1em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     opacity: 0.5;
     color: rgb(90, 89, 89);
@@ -67,25 +73,27 @@
         transform: translateY(25%);
     }
 }
-/* .custom-shape-divider-bottom-1640521754 {
+
+.custom-shape-divider-bottom-1638974829 {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1640521754 svg {
+.custom-shape-divider-bottom-1638974829 svg {
     position: relative;
     display: block;
-    width: calc(146% + 1.3px);
-    height: 138px;
+    width: calc(157% + 1.3px);
+    height: 311px;
 }
 
-.custom-shape-divider-bottom-1640521754 .shape-fill {
-    fill: blue;
-} */
+.custom-shape-divider-bottom-1638974829 .shape-fill {
+    fill: rgba(0, 0, 0, 0.911);
+}
 @media screen and (max-width: 1110px) {
     .page{
         text-align: center;

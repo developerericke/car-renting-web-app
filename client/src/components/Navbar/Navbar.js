@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
 import './Navbar.css'
 import Button from './Button'
-import {Link} from 'react-router-dom'
 import NavPic from './nav.png'
+import {HashLink as Link} from 'react-router-hash-link';
 
 const Navbar = () => {
     const [click,setClick] = useState(false);
@@ -28,27 +28,27 @@ const Navbar = () => {
                         onClick={closeMenu}>Home</Link>
                     </li>
 
-                    {/* <li className='nav-item' >
-                        <Link to='/cars' className="nav-links" 
-                        onClick={closeMenu}>Cars </Link>
-                        
-                    </li> */}
                     <li className='nav-item'>
                         <Link to='/upload' className="nav-links" 
                         onClick={closeMenu}>Uploads </Link>
                         
                     </li>
                     <li className='nav-item'>
-                        <a href='#about' className="nav-links" 
-                        onClick={closeMenu}>About </a>
+                        <Link smooth to='#about' className="nav-links" 
+                        onClick={closeMenu}>About </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/bookings' className="nav-links" 
+                        <Link smoooth to='#book' className="nav-links" 
+                        onClick={closeMenu}>Book </Link>
+                        
+                    </li>
+                    <li className='nav-item'>
+                        <Link smoooth to='/bookings' className="nav-links" 
                         onClick={closeMenu}>MyBookings </Link>
                         
                     </li>
                     <li className='nav-item'>
-                        <Link to='/contact' className="nav-links" 
+                        <Link to='#contact' className="nav-links" 
                         onClick={closeMenu}>Contacts</Link>
                     </li>
                     <li className='nav-item'>

@@ -350,7 +350,6 @@ exports.carUpdates = (req,res)=>{
        img_name=''//ile.name;
 
        if (req.files){
-
          const file = req.files.uploaded_image;
          img_name=file.name;
   
@@ -406,12 +405,9 @@ exports.carUpdates = (req,res)=>{
 exports.deleteCar = (req,res)=>{
 
     const sql = `DELETE FROM cars WHERE id = ${req.body.id}`;
-    console.log(sql)
     db.execute(sql). 
     then(result=>{
-        // res.render('CarUpdate',{title:'cars',userData:result[0]});
         console.log(result)
-       
         res.redirect('/cars/updates')
     }).catch((err)=>{
         console.log(err)

@@ -4,10 +4,10 @@ import Car from './car.png'
 
 const About = () => {
   return (
-    <section id="about">
+    <div id="about">
     <div className="About">
       <div className="Aboutleft" data-aos="zoom-in" data-aos-delay='50'>
-        <h1>Welcome To Carspace</h1>
+        <h1>Welcome To NewVile</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
           Sint cum quam unde dolorum nesciunt eligendi, voluptatum perspiciatis
@@ -29,23 +29,13 @@ const About = () => {
       <div className="Aboutright" data-aos="fade-left" data-aos-delay='50'>
         <img src={Car} alt="image"/>
       </div>
-      <div class="custom-shape-divider-bottom-1638974829">
-        <svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <rect x="1200" height="3.6"></rect>
-          <rect height="3.6"></rect>
-          <path
-            d="M0,0V3.6H580.08c11,0,19.92,5.09,19.92,13.2,0-8.14,8.88-13.2,19.92-13.2H1200V0Z"
-            class="shape-fill"
-          ></path>
-        </svg>
-      </div>
+      <div class="custom-shape-divider-bottom-1641407901">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" class="shape-fill"></path>
+    </svg>
+</div>
     </div>
-    </section>
+    </div>
   );
 };
 

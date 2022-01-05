@@ -43,7 +43,7 @@
     .contact{
         display: flex;
         position: relative;
-        margin-top: 57em;
+        margin-top: 0em;
         min-height: 80vh;
         justify-content: center;
         text-align: center;
@@ -53,7 +53,7 @@
     .contact{
         display: flex;
         position: relative;
-        margin-top: 57em;
+        margin-top: 0em;
         min-height: 80vh;
         justify-content: center;
         text-align: center;
@@ -64,8 +64,8 @@
       .contact{
           display: grid;
           position: relative;
-          margin-top: 57em;
           min-height: 100vh;
+          margin-top: 0em;
           text-align: start;
           justify-content: flex-start;
       }

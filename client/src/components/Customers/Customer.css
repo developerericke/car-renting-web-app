@@ -1,8 +1,103 @@
-.customer{
-    justify-content: center;
-    color: black;
-    background-color: #fff;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.customer h1{
+.Customerservice{
+    background-color: gray;
+    margin-bottom: 3em;
+    min-height: 80vh;
+    position: relative;
+}
+.Customerservice h3,h1{
+    color: #fff;
+}
+.cus{
+    color: slategray;
+    width: 60%;
+    max-width: 60%;
+    height: 100%;
+    margin: 5rem auto;
+    display: grid;
+    gap: 4rem;
+}
+.cuscards img{
+    width: 50%;
+    height: 10em;
+    border-radius: 50%;
+}
+.cuscards h1{
+    color: gray;
+}
+@media screen and (min-width:960px) {
+    .cus{
+        grid-template-columns: repeat(3,1fr);
+    }   
+}
+.cuscards{
+    background: white;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    box-shadow: 2px 2px 2px 1px white;
+    margin-bottom: 4rem;
+    margin-top: 5rem;
+}
+.cuscards:hover {
+    box-shadow: 0 5px 15px whitesmoke;
+    transition: box-shadow 0.3s ease-in-out;
+    background-color: rgb(14, 82, 160);
+    color: #fff;
+  }
+  .cuscards btn:hover{
+      color: red;
+  }
+.cuscards h1{
+    margin-top: 1rem;
+}
+.cuscards p{
+    margin-top: 2rem;
     font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.cuscards button{
+    font-size: 15px;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+}
+.btn1{
+    border: 1px solid red;
+    background: transparent;
+    padding: 4px 10px;
+    font-size: 1.5rem;
+    color: red;
+    background: whitesmoke;
+    margin-bottom: 4rem;
+    border-radius: 50%;
+}
+.btn1:hover{
+    color: white;
+    background: red;
+}
+
+.custom-shape-divider-bottom-1641418353 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1641418353 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 115px;
+}
+
+.custom-shape-divider-bottom-1641418353 .shape-fill {
+    fill: black;
 }

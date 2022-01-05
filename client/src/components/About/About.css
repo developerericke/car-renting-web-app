@@ -1,5 +1,5 @@
 .About{
-    background-color: black;
+    background-color: rgb(5, 48, 83);
     color: #fff;
     min-height: 60vh;
     margin-top: -7em;
@@ -38,34 +38,32 @@
     width: 50%;
     height: 40%;
 }
-.custom-shape-divider-bottom-1638974829 {
+.custom-shape-divider-bottom-1641407901 {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1638974829 svg {
+.custom-shape-divider-bottom-1641407901 svg {
     position: relative;
     display: block;
-    width: calc(157% + 1.3px);
-    height: 311px;
+    width: calc(168% + 1.3px);
+    height: 120px;
 }
 
-.custom-shape-divider-bottom-1638974829 .shape-fill {
-    fill: darkgoldenrod;
+.custom-shape-divider-bottom-1641407901 .shape-fill {
+    fill: lightblue;
 }
-
 @media screen and (max-width: 960px){
     .About{
         display: grid;
         position: relative;
         justify-content: center;
         align-items: center;
-        background-color: black;
+        background-color: rgb(5, 48, 83);
     }
     .Aboutleft{
         width: 100%;
@@ -87,19 +85,6 @@
         position: relative;
         justify-content: center;
         align-items: center;
-    }
-    .Aboutright{
-        margin-bottom: 2em;
-        width: 100%;
-    }
-}
-@media screen and (max-width: 960px){
-    .About{
-        display: grid;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        background-color: black;
     }
     .Aboutright{
         margin-bottom: 2em;

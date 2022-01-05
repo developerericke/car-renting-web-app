@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 
 const Message1 = () => {
     return (
-        <div className="messo">
+        <div className="messo" id="contact">
             <div className="Cr">
                 <p>CarRental</p>
             </div>

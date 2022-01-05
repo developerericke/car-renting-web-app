@@ -1,55 +1,15 @@
-.Carousel{
+.slide-container{
+    min-height: 70vh;
     background-color: #fff;
     margin-top: -1em;
-    position: relative;
-    min-height: 40vh;
-}
-.caroul{
-    width: 70%;
-    text-align: center;
     justify-content: center;
-    border: 2px;
-    
+    align-items: center;
+    text-align: center;
 }
-.caroul img{
-    width: 40%;
-    height: 30%;
-    border-radius: 30px;
+.slide-container image{
+    width: 50%;
+    height: 20em;
 }
-.Carousel p{
-    margin-bottom: 3em;
-    font-size: 16px;
-}
-.head{
-    opacity: 2rem;
-    color: whitesmoke;
-    margin-bottom: 5rem;
-}
-.custom-shape-divider-bottom-1638941787 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-bottom-1638941787 svg {
-    position: relative;
-    display: block;
-    width: calc(149% + 1.3px);
-    height: 191px;
-}
-
-.custom-shape-divider-bottom-1638941787 .shape-fill {
-    fill: darkblue;
-}
-@media screen and (max-width: 960px){
-    .Carousel{
-        display: grid;
-        position: relative;
-    }
-    .head p{
-        margin-bottom: 10em;
-    }
+.each-slide img{
+    height: 100em;
 }

@@ -5,10 +5,13 @@
     font-family: fantasy;
     justify-content: center;
     align-items: center;
-    margin-top: -0.3em;
+    margin-top: -3em;
 }
 .Cr{
     opacity: 2em;
     margin-bottom: 2em;
     color: black;
+}
+.messo p{
+    margin-bottom: 3em;
 }
