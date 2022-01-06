@@ -1,12 +1,16 @@
 import React,{useState,useEffect} from 'react'
 import Axios from 'axios';
+import './upload.css'
 import './upload.css';
 import { Random } from 'react-animated-text';
+import { css } from "@emotion/react";
+import  PuffLoader from "react-spinners/PuffLoader";
 
 const Upload = () => {
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(false); 
     const [error,setError] = useState();
+    let [color, setColor] = useState("white");
 
     const getCars =() =>{
         setIsLoading(true);
@@ -22,13 +26,22 @@ const Upload = () => {
     useEffect(()=>{
     getCars();
     }, []);
+
+    const override = css`
+    display: block;
+    margin: 0 auto;
+    border-color: red;
+    justify-content: center;
+    align-items: center;
+  `;
     
     if(error){
         return <h1><Random text="  Sorry something went wrong"/></h1>
     }
     if(isLoading){
-      return <h1>Loading...</h1>
+      return <PuffLoader color={color} loading={isLoading} css={override} size={150} />
     }
+
     
     return (
 

@@ -9,8 +9,12 @@
     min-height: 80vh;
     position: relative;
 }
-.Customerservice h3,h1{
-    color: #fff;
+.Customerservice h3{
+    color: red;
+    font-size: 15px;
+}
+.Customerservice h1{
+    color: black;
 }
 .cus{
     color: slategray;
@@ -38,7 +42,7 @@
     }
 }
 .cuscards{
-    background: white;
+    background: rgb(238, 235, 235);
     border-radius: 1rem;
     padding: 1rem 2rem;
     box-shadow: 2px 2px 2px 1px white;
@@ -54,6 +58,10 @@
 .cuscards h1{
     margin-top: 1rem;
 }
+.cuscards h1:hover{
+    margin-top: 1rem;
+    color: red;
+}
 .cuscards p{
     margin-top: 2rem;
     font-size: 15px;
@@ -68,7 +76,7 @@
 }
 
 
-.custom-shape-divider-bottom-1641418353 {
+.custom-shape-divider-bottom-1641480908 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -78,13 +86,16 @@
     transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1641418353 svg {
+.custom-shape-divider-bottom-1641480908 svg {
     position: relative;
     display: block;
-    width: calc(100% + 1.3px);
-    height: 115px;
+    width: calc(163% + 1.3px);
+    height: 237px;
 }
 
+.custom-shape-divider-bottom-1641480908 .shape-fill {
+    fill: black;
+}
 .custom-shape-divider-bottom-1641418353 .shape-fill {
     fill: black;
 }

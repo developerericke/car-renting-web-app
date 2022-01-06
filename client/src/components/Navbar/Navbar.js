@@ -23,7 +23,7 @@ const Navbar = () => {
                 </div>
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
 
-                    <li className='nav-item'>
+                    <li className='nav-itemx'>
                         <Link to='/' className="nav-links" 
                         onClick={closeMenu}>Home</Link>
                     </li>
@@ -47,10 +47,10 @@ const Navbar = () => {
                         onClick={closeMenu}>MyBookings </Link>
                         
                     </li>
-                    <li className='nav-item'>
-                        <Link to='#contact' className="nav-links" 
+                    <button className='nav-itemb'>
+                        <Link to='/contact' className="nav-links" 
                         onClick={closeMenu}>Contacts</Link>
-                    </li>
+                    </button>
                     <li className='nav-item'>
                     <Button/>
                     </li>

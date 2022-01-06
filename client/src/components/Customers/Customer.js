@@ -26,8 +26,8 @@ const Customer = () => {
     const [cards,setCards] = useState(helpline);
     return (
         <div className="Customerservice">
-            <h3>For enquiries, you can contact</h3>
-            <h1>CUSTOMER SERVICE</h1>
+            <h3>For enquiries, you can contact our</h3>
+            <h1>Customer Service Group</h1>
             <div className="cus" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2500">
            {cards.map((project)=>{
                return(
@@ -36,9 +36,11 @@ const Customer = () => {
            })}
         </div>
         <div className='style'>.</div>
-        <div class="custom-shape-divider-bottom-1641418353">
+        <div class="custom-shape-divider-bottom-1641480908">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+        <rect x="1200" height="3.6"></rect>
+        <rect height="3.6"></rect>
+        <path d="M0,0V3.6H580.08c11,0,19.92,5.09,19.92,13.2,0-8.14,8.88-13.2,19.92-13.2H1200V0Z" class="shape-fill"></path>
     </svg>
 </div>
         </div>

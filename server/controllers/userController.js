@@ -136,11 +136,11 @@ exports.login = async (req, res, next) => {
         if (checkPass === true) {
             req.session.userID = row[0].id;
             return res.redirect('/home');
+        }else{
+            res.render('login', {
+                error: 'Invalid Password.'
+            });
         }
-
-        res.render('login', {
-            error: 'Invalid Password.'
-        });
     }
     catch (e) {
         next(e);

@@ -214,12 +214,12 @@
         border-bottom-right-radius: 35px;
     }
     .title-text h1{
-        font-size: 50px;
+        font-size: 35px;
         color: #fff;
     }
     
     .feature-box{
-        width: 80%;
+        width: 85%;
         margin: auto;
         display: flex;
         flex-wrap: wrap;
@@ -234,7 +234,7 @@
         margin: auto;
     }
     .features-img img{
-        width: 80%;
+        width: 100%;
         border-radius: 50%;
     }
     .features h1{
@@ -245,7 +245,7 @@
     
     }
     .header2{
-        margin-top: 5em;
+        margin-top: 0em;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -300,6 +300,10 @@
         align-items: center;
         margin-bottom: 50px;
     }
+    .AboutDown1{
+        margin-bottom: 0em;
+        color: black;
+    }
     .feature-icon .fas{
         width: 50px;
         height: 50px;
@@ -323,7 +327,7 @@
         padding: 0 20px;
         text-align: initial;
     }
-    .custom-shape-divider-bottom-1641416307 {
+    .custom-shape-divider-bottom-1641478656 {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -333,16 +337,17 @@
         transform: rotate(180deg);
     }
     
-    .custom-shape-divider-bottom-1641416307 svg {
+    .custom-shape-divider-bottom-1641478656 svg {
         position: relative;
         display: block;
-        width: calc(175% + 1.3px);
-        height: 109px;
+        width: calc(150% + 1.3px);
+        height: 175px;
     }
     
-    .custom-shape-divider-bottom-1641416307 .shape-fill {
+    .custom-shape-divider-bottom-1641478656 .shape-fill {
         fill: rgb(5, 48, 83);
     }
+    
     @media  screen and (max-width: 768px) {
         .title-text h1{
             font-size: 35px;
@@ -369,6 +374,10 @@
         }
         .features-img img{
             width: 100%;
+        }
+        .AboutDown1{
+            margin-bottom: 0em;
+            color: black;
         }
         .header2{
             margin-left: 0em;

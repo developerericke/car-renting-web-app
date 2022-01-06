@@ -38,25 +38,30 @@
     width: 50%;
     height: 40%;
 }
-.custom-shape-divider-bottom-1641407901 {
+.AboutDown{
+    color: rgb(5, 48, 83);
+}
+.custom-shape-divider-bottom-1641478882 {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1641407901 svg {
+.custom-shape-divider-bottom-1641478882 svg {
     position: relative;
     display: block;
-    width: calc(168% + 1.3px);
-    height: 120px;
+    width: calc(151% + 1.3px);
+    height: 175px;
 }
 
-.custom-shape-divider-bottom-1641407901 .shape-fill {
+.custom-shape-divider-bottom-1641478882 .shape-fill {
     fill: darkgoldenrod;
 }
+
 @media screen and (max-width: 960px){
     .About{
         display: grid;
@@ -73,8 +78,11 @@
         justify-content: center;
     }
     .Aboutright{
-        margin-bottom: 5em;
         width: 100%;
+    }
+    .AboutDown{
+        margin-bottom: 6em;
+        color: rgb(5, 48, 83);
     }
 
     
