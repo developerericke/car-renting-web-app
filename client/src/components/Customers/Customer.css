@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .Customerservice{
-    background-color: gray;
+    background-color: #fff;
     margin-bottom: 3em;
     min-height: 80vh;
     position: relative;
@@ -33,6 +33,9 @@
     .cus{
         grid-template-columns: repeat(3,1fr);
     }   
+    .style{
+        margin-bottom: 1em;
+    }
 }
 .cuscards{
     background: white;
@@ -43,13 +46,10 @@
     margin-top: 5rem;
 }
 .cuscards:hover {
-    box-shadow: 0 5px 15px whitesmoke;
+    box-shadow: 0 5px 15px gray;
     transition: box-shadow 0.3s ease-in-out;
-    background-color: rgb(14, 82, 160);
-    color: #fff;
-  }
-  .cuscards btn:hover{
-      color: red;
+    background-color: whitesmoke;
+    color: blue;
   }
 .cuscards h1{
     margin-top: 1rem;
@@ -66,20 +66,7 @@
     border-radius: 1rem;
     padding: 1rem 1rem;
 }
-.btn1{
-    border: 1px solid red;
-    background: transparent;
-    padding: 4px 10px;
-    font-size: 1.5rem;
-    color: red;
-    background: whitesmoke;
-    margin-bottom: 4rem;
-    border-radius: 50%;
-}
-.btn1:hover{
-    color: white;
-    background: red;
-}
+
 
 .custom-shape-divider-bottom-1641418353 {
     position: absolute;

@@ -1,7 +1,7 @@
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
-// import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import Home from './views/Home';
 import Tell from './components/Tell/Tell';
 import Cars from './components/Cars/Cars';
@@ -11,6 +11,7 @@ import Upload from './components/Upload/Upload';
 function App() {
   return (
     <BrowserRouter>
+    <Navbar/>
     <div className='App'>
     </div>
     <Routes>

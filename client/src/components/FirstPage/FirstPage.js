@@ -4,7 +4,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { Random } from 'react-animated-text';
 import {BsMouse} from 'react-icons/bs';
-import Navbar from '../Navbar/Navbar'
+// import Navbar from '../Navbar/Navbar'
 
 const FirstPage = () => {
   useEffect(() => {
@@ -12,10 +12,10 @@ const FirstPage = () => {
   }, []);
   return (
     <div className="page">
-      <div className="rent1">
+      {/* <div className="rent1">
         <h1>.</h1>
       </div>
-      <Navbar/>
+      <Navbar/> */}
       <div className="rent">
         <h1>.</h1>
       </div>

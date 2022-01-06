@@ -7,7 +7,7 @@ const helpline= [
         img : 'https://media.istockphoto.com/photos/portrait-of-smiling-mixed-race-woman-looking-at-camera-picture-id1319763830?b=1&k=20&m=1319763830&s=170667a&w=0&h=wE44n9yP1nrefeqv5DCl5mE3ouU01FNNHeZPR0yDCWA=',
         name : 'Grace White',
         contact : '0123437373',
-        mail : 'ben@gmail.com'
+        mail : 'grace@gmail.com'
     },
     {   id : 2,
         img : 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
@@ -35,6 +35,7 @@ const Customer = () => {
                );
            })}
         </div>
+        <div className='style'>.</div>
         <div class="custom-shape-divider-bottom-1641418353">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
