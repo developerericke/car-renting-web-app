@@ -186,6 +186,7 @@
     background-color: black;
     color: #fff;
     position: relative;
+    min-height: 100vh;
 }
 .title-text{
         text-align: center;

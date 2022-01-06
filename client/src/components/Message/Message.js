@@ -2,6 +2,7 @@ import React,{useRef} from "react";
 import "./Message.css";
 import "aos/dist/aos.css";
 import emailjs from 'emailjs-com'
+import Photo from './8.jpg'
 
 const Message = () => {
   const textInput = useRef();
@@ -24,7 +25,7 @@ const Message = () => {
 <div class="contactpic" id="contacts">
         <div className='anime' data-aos="fade-right" data-aos-delay="50">
         <img
-        src="https://images.pexels.com/photos/248747/pexels-photo-248747.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        src={Photo}
         alt="car"
       />
             </div>

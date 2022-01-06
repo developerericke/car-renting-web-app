@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .Customerservice{
-    background-color: #fff;
+    background-color: rgba(1, 3, 8, 0.904);
     margin-bottom: 3em;
     min-height: 80vh;
     position: relative;
@@ -14,7 +14,7 @@
     font-size: 15px;
 }
 .Customerservice h1{
-    color: black;
+    color: white;
 }
 .cus{
     color: slategray;
@@ -74,9 +74,7 @@
     border-radius: 1rem;
     padding: 1rem 1rem;
 }
-
-
-.custom-shape-divider-bottom-1641480908 {
+.custom-shape-divider-bottom-1641498437 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -86,16 +84,14 @@
     transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1641480908 svg {
+.custom-shape-divider-bottom-1641498437 svg {
     position: relative;
     display: block;
-    width: calc(163% + 1.3px);
-    height: 237px;
+    width: calc(100% + 1.3px);
+    height: 133px;
+    transform: rotateY(180deg);
 }
 
-.custom-shape-divider-bottom-1641480908 .shape-fill {
-    fill: black;
-}
-.custom-shape-divider-bottom-1641418353 .shape-fill {
-    fill: black;
+.custom-shape-divider-bottom-1641498437 .shape-fill {
+    fill: rgb(6, 14, 87);
 }
