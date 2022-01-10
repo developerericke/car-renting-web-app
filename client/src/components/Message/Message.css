@@ -22,12 +22,12 @@ button {
   text-align: center;
   justify-content: center;
   font-size: 25px;
-  margin-top: 0em;
+  margin-top: 1.8em;
 }
 .anime img{
 width: 25em;
 height: 20em;
-border-radius: 40%;
+border-radius: 10% / 50%;
 }
 
 form{
@@ -112,7 +112,7 @@ form{
   }
   .anime img{
     width: 18em;
-    border-radius: 50%;
+    border-radius: 40%;
   }
 }
 

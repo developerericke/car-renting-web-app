@@ -2,7 +2,7 @@ import React,{useRef} from "react";
 import "./Message.css";
 import "aos/dist/aos.css";
 import emailjs from 'emailjs-com'
-import Photo from './8.jpg'
+import Photo from './1.jpg'
 
 const Message = () => {
   const textInput = useRef();
