@@ -11,7 +11,6 @@ const Contact = () => {
           quibusdam <br/>ullam, blanditiis magnam dolores.
         </p>
         <h2>STAY CONNECTED</h2>
-
         <div className="column-icon">
                     <a href="http://facebook.com/Wilson Mk" target="_blank" rel="noopener noreferrer">
                         <i className="fa fa-facebook-square"></i>
@@ -28,7 +27,8 @@ const Contact = () => {
                         <i className="fa fa-youtube"></i>
                     </a>
                     </div>
-      </div>
+          </div>
+     
       <div className="list">
         <h1>Our Vehicles</h1>
         <ul className="list1">

@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(fileUpload());
 app.use(cors());
 
-var sessionStore = new MySQLStore(
+const sessionStore = new MySQLStore(
     {
         host: process.env.DATABASE_HOST,
         port: 3306,

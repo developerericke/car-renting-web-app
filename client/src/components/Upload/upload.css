@@ -1,7 +1,19 @@
 .car{
-    background: white;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 h1{
     color: #fff;
+}
+.card-img-top{
+    width: 350px;
+    height: 200px;
+    object-fit: contain;
+}
+@media screen and (max-width: 960px){
+    .car img{
+        width: 400px;
+    }
+    .car btn{
+        justify-content: center;
+    }
 }

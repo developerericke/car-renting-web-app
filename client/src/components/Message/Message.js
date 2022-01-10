@@ -18,7 +18,7 @@ const Message = () => {
       'user_G952580ZzYeciyIlcwCDC').then(res=>{
       alert('Message Sent Successfully');
       }).catch(err=> {console.log(err)
-      alert("Something went wrong");
+      alert("Something went wrong, please try again later");
       });
   }
   return(

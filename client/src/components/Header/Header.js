@@ -4,7 +4,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import Photo from './a.jpeg';
+import Photo from './p1.jpg';
 
 const myOptions = ['Volvo', 'Mercedes', 'Prado', 'Subaru', 'Toyota Cruiser','Pick-up','Truck'];
 const Header = () => {
@@ -15,7 +15,7 @@ const Header = () => {
     <div className="feature" id="features">
         <div className="title-text" data-aos="zoom-in">
             <p>New Vile</p>
-            <h1>Book a Car</h1>
+            <h1>Book a Car Today</h1>
         </div>
         <div className="feature-box">
         <div className="features" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"  data-aos-duration="800">

@@ -183,7 +183,7 @@
 .feature{
     width: 100%;
     padding: 70px 0;
-    background-color: black;
+    background-color: rgb(31, 23, 23);
     color: #fff;
     position: relative;
     min-height: 100vh;
@@ -249,14 +249,15 @@
         margin-top: 0em;
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 65%;
         float: right;
         align-items: center;
         background-color: #fff;
         border-radius: 2px;
+        margin-left: 8em;
         border: 1px solid whitesmoke;
         border-width: 1em;
-        margin-left: 20em;
+        
         justify-content: center;
     }
     .header2 h1{
@@ -382,6 +383,7 @@
         }
         .header2{
             margin-left: 0em;
+            width: 100%;
         }
     }
   
