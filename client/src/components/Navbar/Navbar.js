@@ -16,8 +16,8 @@ const Navbar = () => {
             <nav className="navbar">
             <div className="listItem">
                     <img className="tech" src={NavPic} alt="img"/>
+                    <h1 className="navbar-logo">CarHire</h1>
                 </div>
-                <h1 className="navbar-logo">CarHire</h1>
                 <div className="menu-icon" onClick={handleClick}>
                     <i className={click ? 'fa fa-times' : 'fa fa-bars'}></i>
                 </div>

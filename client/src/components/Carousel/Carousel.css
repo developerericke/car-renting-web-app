@@ -1,15 +1,35 @@
-.slide-container{
-    min-height: 70vh;
-    background-color: #fff;
-    margin-top: -1em;
+.bd{
+    background-color:rgb(49, 127, 158);
+    background-size: cover;
+    min-height: 60vh;
+    color: #fff;
+    margin-top: -5em;
+}
+.carousel{
+    width: 100%;
     justify-content: center;
-    align-items: center;
-    text-align: center;
 }
-.slide-container image{
-    width: 50%;
-    height: 20em;
+.carousel img{
+    width: 600px;
+    height: 300px;
+    object-fit: contain;
+    opacity: 10;
 }
-.each-slide img{
-    height: 100em;
+.carousel h1{
+    margin-bottom: 1em;
+    color: aqua;
+}
+.carousel h3{
+    color: red;
+    font-size: 25px;
+    margin-top: 2em;
+}
+.carousel h4{
+    color: red;
+    font-size: 25px;
+    margin-top: 2em;
+}
+.carousel p{
+    color: yellow;
+    font-size: 25px;
 }

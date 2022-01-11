@@ -14,7 +14,7 @@ const CarDetail = () => {
                  adipisicing elitsed do eiusmod tempor incididunt</p>
             </div>
         </div>
-    )
+    );
 }
 
 export default CarDetail

@@ -100,10 +100,12 @@
         justify-content: center;
     }
   }
-  @media screen and (max-width: 910px) {
+  @media screen and (max-width: 960px) {
     .page{
         text-align: center;
         justify-content: center;
+        background-size: cover;
+        object-fit: contain;
     }
   }
   @media screen and (max-width: 810px) {
